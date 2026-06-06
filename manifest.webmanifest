@@ -1,0 +1,17 @@
+{
+  "name": "Daily Rhythm Tracker",
+  "short_name": "Daily Rhythm",
+  "description": "A personal routine, meals, gym, work, and reminder tracker.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fbfaf7",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "assets/routine-header.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

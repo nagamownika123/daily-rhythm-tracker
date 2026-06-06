@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f766e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Daily Rhythm">
+    <title>Daily Rhythm Tracker</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <img src="assets/routine-header.png" alt="" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow" id="todayLabel">Today</p>
+          <h1>Daily Rhythm</h1>
+          <p class="hero-copy">PCOD-friendly strength, home food, work, pet walk, reading, and fewer phone spirals.</p>
+        </div>
+      </header>
+
+      <main>
+        <section class="status-band" aria-label="Today summary">
+          <div>
+            <p class="metric-label">Now</p>
+            <p class="metric-value" id="currentBlock">Finding your current block</p>
+          </div>
+          <div>
+            <p class="metric-label">Day Type</p>
+            <p class="metric-value" id="dayType">Routine</p>
+          </div>
+          <div>
+            <p class="metric-label">Progress</p>
+            <p class="metric-value" id="progressText">0%</p>
+          </div>
+        </section>
+
+        <section class="today-layout">
+          <div class="timeline-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Timeline</p>
+                <h2 id="selectedDayTitle">Today</h2>
+              </div>
+              <button class="icon-button" id="resetDay" type="button" aria-label="Reset selected day" title="Reset selected day">
+                <span aria-hidden="true">↺</span>
+              </button>
+            </div>
+            <div id="timeline" class="timeline"></div>
+          </div>
+
+          <aside class="side-panel">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Fitness</p>
+                <h2>Training Intent</h2>
+              </div>
+            </div>
+            <div class="profile-card">
+              <div>
+                <span>Born 1994</span>
+                <strong>Fitness for PCOD, strength, energy, and cycle health</strong>
+              </div>
+              <div class="profile-metrics">
+                <span>5'2"</span>
+                <span>53.4 kg</span>
+                <span>BMI ~21.5</span>
+              </div>
+            </div>
+
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Meals</p>
+                <h2>Today's Food</h2>
+              </div>
+            </div>
+            <div class="meal-list" id="mealList"></div>
+
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Reminders</p>
+                <h2>Block Alerts</h2>
+              </div>
+            </div>
+            <div class="reminder-card">
+              <button class="reminder-button" id="enableReminders" type="button">Enable reminders</button>
+              <p id="reminderStatus">Pop-ups are off.</p>
+            </div>
+
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Focus</p>
+                <h2>Phone Boundaries</h2>
+              </div>
+            </div>
+            <div class="boundary-list" id="boundaryList"></div>
+
+            <div class="section-heading compact stacked">
+              <div>
+                <p class="eyebrow">Food</p>
+                <h2>Cooking Windows</h2>
+              </div>
+            </div>
+            <div class="mini-list">
+              <div>
+                <span>8:00 - 10:00</span>
+                <strong>Gym on Mon/Wed/Fri/Sat; home reset on other days</strong>
+              </div>
+              <div>
+                <span>10:00 - 11:00</span>
+                <strong>Bath, breakfast, skin care, quick prep</strong>
+              </div>
+              <div>
+                <span>2:30 - 3:15</span>
+                <strong>Lunch and kitchen reset</strong>
+              </div>
+              <div>
+                <span>4:30 PM</span>
+                <strong>Fruit at desk, whole fruit only</strong>
+              </div>
+              <div>
+                <span>6:00 - 6:30</span>
+                <strong>Scooby walk before meetings</strong>
+              </div>
+              <div>
+                <span>6:30 onward</span>
+                <strong>Meetings; dinner at desk</strong>
+              </div>
+            </div>
+
+            <div class="section-heading compact stacked">
+              <div>
+                <p class="eyebrow">Skin</p>
+                <h2>Daily Care</h2>
+              </div>
+            </div>
+            <div class="mini-list">
+              <div>
+                <span>Morning</span>
+                <strong>Cleanse, moisturize, sunscreen</strong>
+              </div>
+              <div>
+                <span>Night</span>
+                <strong>Cleanse, moisturize, no phone in bed</strong>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="week-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Week</p>
+              <h2>Fixed Rhythm</h2>
+            </div>
+          </div>
+          <div class="week-grid" id="weekGrid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
